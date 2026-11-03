@@ -1,9 +1,24 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# SST v3 Monorepo Project
 
-## This is NOT the Next.js you know
+This is an SST v3 monorepo with TypeScript. The project uses bun workspaces for package management.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Project Structure
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+- `packages/` - Contains all workspace packages (functions, core, web, etc.)
+- `infra/` - Infrastructure definitions split by service (storage.ts, api.ts, web.ts)
+- `sst.config.ts` - Main SST configuration with dynamic imports
 
-<!-- END:nextjs-agent-rules -->
+## Code Standards
+
+- Use TypeScript with strict mode enabled
+- Shared code goes in `packages/core/` with proper exports configuration
+- Functions go in `packages/functions/`
+- Infrastructure should be split into logical files in `infra/`
+
+## Development Guidelines
+
+For UI and REact related code style and best practices: @.agents/rules/ui.md
+
+## Monorepo Conventions
+
+- Import shared modules using workspace names: `@my-app/core/example`
