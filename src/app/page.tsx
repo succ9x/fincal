@@ -198,7 +198,7 @@ export default function Home() {
     <div className="flex flex-1 flex-col">
       <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-6">
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Wallet className="size-4" />
             </span>
@@ -491,7 +491,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" asChild>
-                  <a href="#">
+                  <a href="/mortage-repayments-calculator">
                     Try the mortgage calculator
                     <ArrowRight data-icon="inline-end" />
                   </a>
@@ -538,7 +538,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" asChild>
-                  <a href="#">
+                  <a href="/mortage-repayments-calculator">
                     Try the compound interest calculator
                     <ArrowRight data-icon="inline-end" />
                   </a>
@@ -710,3 +710,5 @@ export default function Home() {
     </div>
   );
 }
+
+
